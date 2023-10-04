@@ -35,9 +35,6 @@ public final class ScreenshotPreventingView: UIView {
     private let recognizer = HiddenContainerRecognizer()
     private lazy var hiddenContentContainer: UIView? = try? recognizer.getHiddenContainer(from: textField)
 
-    // MARK: - 🎨 Style
-    // MARK: - 🧩 Subviews
-    // MARK: - 👆 Actions
     // MARK: - 🔨 Initialization
 
     public init(contentView: UIView? = nil) {
@@ -50,8 +47,6 @@ public final class ScreenshotPreventingView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // MARK: - 🖼 View Lifecycle
 
     // MARK: - 🏗 UI
 

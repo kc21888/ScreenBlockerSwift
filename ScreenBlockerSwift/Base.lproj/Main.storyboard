@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Screen Blocker-->
+        <!--Screen Blocker Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomePageVC" customModule="ScreenBlockerSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                             <constraint firstItem="7R6-Vt-K4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zcI-11-5un"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Screen Blocker" id="C2u-pO-Fkx"/>
+                    <navigationItem key="navigationItem" title="Screen Blocker Demo" id="C2u-pO-Fkx"/>
                     <connections>
                         <outlet property="tableview" destination="7R6-Vt-K4q" id="j04-dS-2oT"/>
                     </connections>
@@ -45,10 +45,80 @@
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
-        <!--BlockUI KitVC-->
+        <!--TheoryVC-->
+        <scene sceneID="Mt9-wm-lUA">
+            <objects>
+                <viewController storyboardIdentifier="TheoryVC" id="Ysg-L2-fYk" userLabel="TheoryVC" customClass="TheoryVC" customModule="ScreenBlockerSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fRB-49-ksv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="未隱碼輸入" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F94-zd-gl1">
+                                <rect key="frame" x="15" y="134" width="363" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="otA-5Z-o4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未隱碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0a-qa-lIq">
+                                <rect key="frame" x="15" y="89" width="363" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QVa-OH-gke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隱碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="329-4z-PAN">
+                                <rect key="frame" x="15" y="209" width="363" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="T3A-A1-uSz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="隱碼輸入" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xHn-0F-BMU">
+                                <rect key="frame" x="15" y="254" width="363" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="X6Q-gb-psP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qbu-Hn-Isz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F94-zd-gl1" firstAttribute="top" secondItem="K0a-qa-lIq" secondAttribute="bottom" constant="15" id="3GI-kf-a6M"/>
+                            <constraint firstItem="qbu-Hn-Isz" firstAttribute="trailing" secondItem="F94-zd-gl1" secondAttribute="trailing" constant="15" id="BCt-kc-Kl6"/>
+                            <constraint firstItem="329-4z-PAN" firstAttribute="top" secondItem="F94-zd-gl1" secondAttribute="bottom" constant="40" id="BKP-e0-P0V"/>
+                            <constraint firstItem="F94-zd-gl1" firstAttribute="leading" secondItem="qbu-Hn-Isz" secondAttribute="leading" constant="15" id="BfN-Ds-6KE"/>
+                            <constraint firstItem="xHn-0F-BMU" firstAttribute="top" secondItem="329-4z-PAN" secondAttribute="bottom" constant="15" id="CEE-sp-H72"/>
+                            <constraint firstItem="329-4z-PAN" firstAttribute="leading" secondItem="qbu-Hn-Isz" secondAttribute="leading" constant="15" id="ISd-VU-5d3"/>
+                            <constraint firstItem="xHn-0F-BMU" firstAttribute="leading" secondItem="qbu-Hn-Isz" secondAttribute="leading" constant="15" id="Wvh-eN-KD9"/>
+                            <constraint firstItem="K0a-qa-lIq" firstAttribute="leading" secondItem="qbu-Hn-Isz" secondAttribute="leading" constant="15" id="Xul-y4-vnH"/>
+                            <constraint firstItem="K0a-qa-lIq" firstAttribute="top" secondItem="qbu-Hn-Isz" secondAttribute="top" constant="30" id="fNc-Kj-v3Q"/>
+                            <constraint firstItem="qbu-Hn-Isz" firstAttribute="trailing" secondItem="329-4z-PAN" secondAttribute="trailing" constant="15" id="kvm-wN-7ED"/>
+                            <constraint firstItem="qbu-Hn-Isz" firstAttribute="trailing" secondItem="xHn-0F-BMU" secondAttribute="trailing" constant="15" id="lfw-rJ-3yN"/>
+                            <constraint firstItem="qbu-Hn-Isz" firstAttribute="trailing" secondItem="K0a-qa-lIq" secondAttribute="trailing" constant="15" id="oXq-6c-EnB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="理論" id="E7Y-hZ-rEb"/>
+                    <connections>
+                        <outlet property="hideTextfield" destination="xHn-0F-BMU" id="liV-lq-1xN"/>
+                        <outlet property="noHideTextfield" destination="F94-zd-gl1" id="2wb-gY-qfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqP-zn-Kko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="-720"/>
+        </scene>
+        <!--BlockUIKitVC-->
         <scene sceneID="gMZ-vu-tVx">
             <objects>
-                <viewController storyboardIdentifier="BlockUIKitVC" id="Rv6-HW-v8Z" customClass="BlockUIKitVC" customModule="ScreenBlockerSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlockUIKitVC" id="Rv6-HW-v8Z" userLabel="BlockUIKitVC" customClass="BlockUIKitVC" customModule="ScreenBlockerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vC0-jr-B3f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

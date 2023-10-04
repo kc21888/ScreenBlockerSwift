@@ -24,14 +24,12 @@ class BlockUIKitVC: UIViewController {
         self.imageViewSetting()
         self.textfieldSetting()
         self.labelSetting()
-        
-        
     }
     
     deinit {
-        
+        print("===) BlockUIKitVC deinit.")
     }
-    
+        
     func imageViewSetting () {
      
         let image = UIImage(named: "sea.jpg")
@@ -52,10 +50,39 @@ class BlockUIKitVC: UIViewController {
     
     func textfieldSetting() {
         
+        self.textField.text = "Pete Hu"
+        self.textField.layer.borderWidth = 1
+        self.textField.layer.borderColor = UIColor.black.cgColor
+        
+        self.pvTextField = ScreenshotPreventingView(contentView: textField)
+        self.pvTextField.translatesAutoresizingMaskIntoConstraints = false
+        self.pvTextField.preventScreenCapture = true
+        
+        view.addSubview(self.pvTextField)
+        
+        NSLayoutConstraint(item: self.pvTextField, attribute: .top, relatedBy: .equal, toItem: self.pvImageView, attribute: .bottom, multiplier: 1, constant: 20).isActive = true
+        NSLayoutConstraint(item: self.pvTextField, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 15).isActive = true
+        NSLayoutConstraint(item: self.pvTextField, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200).isActive = true
+        NSLayoutConstraint(item: self.pvTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 35).isActive = true
     }
     
     func labelSetting() {
         
+        self.label.text = "$100,000,000"
+        self.label.numberOfLines = 0
+        
+        self.pvLabel = ScreenshotPreventingView(contentView: label)
+        self.pvLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.pvLabel.preventScreenCapture = true
+        
+        view.addSubview(self.pvLabel)
+        
+        NSLayoutConstraint(item: self.pvLabel, attribute: .top, relatedBy: .equal, toItem: self.pvTextField, attribute: .bottom, multiplier: 1, constant: 20).isActive = true
+        NSLayoutConstraint(item: self.pvLabel, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 15).isActive = true
+        NSLayoutConstraint(item: self.pvLabel, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -15).isActive = true
+        NSLayoutConstraint(item: self.pvLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
     }
-    
+ 
 }
+
+

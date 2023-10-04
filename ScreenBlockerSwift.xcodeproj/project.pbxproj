@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E917F5392ACD0EDC001EA9C3 /* TheoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917F5382ACD0EDC001EA9C3 /* TheoryVC.swift */; };
 		E925BE3E2A4968B300334A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925BE3D2A4968B300334A70 /* AppDelegate.swift */; };
 		E925BE402A4968B300334A70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925BE3F2A4968B300334A70 /* SceneDelegate.swift */; };
 		E925BE422A4968B300334A70 /* BlockUIKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925BE412A4968B300334A70 /* BlockUIKitVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E917F5382ACD0EDC001EA9C3 /* TheoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryVC.swift; sourceTree = "<group>"; };
 		E925BE3A2A4968B300334A70 /* ScreenBlockerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenBlockerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E925BE3D2A4968B300334A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E925BE3F2A4968B300334A70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E917F5372ACD0E0C001EA9C3 /* Theory */ = {
+			isa = PBXGroup;
+			children = (
+				E917F5382ACD0EDC001EA9C3 /* TheoryVC.swift */,
+			);
+			path = Theory;
+			sourceTree = "<group>";
+		};
 		E925BE312A4968B300334A70 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 				E925BE432A4968B300334A70 /* Main.storyboard */,
 				E971E1CF2ACA99E700937089 /* Base */,
 				E971E1CE2ACA99CA00937089 /* Resource */,
+				E917F5372ACD0E0C001EA9C3 /* Theory */,
 				E971E1CB2ACA995B00937089 /* BlockUIKit */,
 				E971E1CA2ACA994F00937089 /* Home */,
 				E971E1CD2ACA99B100937089 /* BlockVideoKit */,
@@ -191,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E917F5392ACD0EDC001EA9C3 /* TheoryVC.swift in Sources */,
 				E951EBC42AC1890E006767E9 /* ScreenshotPreventingView.swift in Sources */,
 				E925BE422A4968B300334A70 /* BlockUIKitVC.swift in Sources */,
 				E971E1C82ACA994700937089 /* HomePageVC.swift in Sources */,
