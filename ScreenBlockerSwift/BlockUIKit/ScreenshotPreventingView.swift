@@ -99,8 +99,5 @@ public final class ScreenshotPreventingView: UIView {
         ])
     }
 
-    // MARK: - 🔒 Private Methods
-
 }
 
-// MARK: - 🧶 Extensions

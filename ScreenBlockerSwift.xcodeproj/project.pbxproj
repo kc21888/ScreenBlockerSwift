@@ -99,9 +99,9 @@
 		E971E1CB2ACA995B00937089 /* BlockUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E925BE412A4968B300334A70 /* BlockUIKitVC.swift */,
 				E951EBC12AC1890E006767E9 /* HiddenContainerRecognizer.swift */,
 				E951EBC22AC1890E006767E9 /* ScreenshotPreventingView.swift */,
-				E925BE412A4968B300334A70 /* BlockUIKitVC.swift */,
 			);
 			path = BlockUIKit;
 			sourceTree = "<group>";

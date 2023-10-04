@@ -105,7 +105,7 @@
                             <constraint firstItem="qbu-Hn-Isz" firstAttribute="trailing" secondItem="K0a-qa-lIq" secondAttribute="trailing" constant="15" id="oXq-6c-EnB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="理論" id="E7Y-hZ-rEb"/>
+                    <navigationItem key="navigationItem" title="Theory" id="E7Y-hZ-rEb"/>
                     <connections>
                         <outlet property="hideTextfield" destination="xHn-0F-BMU" id="liV-lq-1xN"/>
                         <outlet property="noHideTextfield" destination="F94-zd-gl1" id="2wb-gY-qfB"/>
@@ -125,6 +125,7 @@
                         <viewLayoutGuide key="safeArea" id="NFT-3l-UHB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Test Block UIKit" id="gy4-N6-1c6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOI-v0-rnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

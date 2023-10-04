@@ -9,6 +9,8 @@ import UIKit
 
 class BlockUIKitVC: UIViewController {
     
+    let sw = UISwitch()
+    
     var imageView = UIImageView()
     lazy var pvImageView = ScreenshotPreventingView(contentView: imageView)
     
@@ -24,25 +26,25 @@ class BlockUIKitVC: UIViewController {
         self.imageViewSetting()
         self.textfieldSetting()
         self.labelSetting()
+        self.switchSetting()
     }
     
     deinit {
         print("===) BlockUIKitVC deinit.")
     }
-        
+    
     func imageViewSetting () {
-     
+        
         let image = UIImage(named: "sea.jpg")
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.image = image
         
         self.pvImageView = ScreenshotPreventingView(contentView: imageView)
         self.pvImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.pvImageView.preventScreenCapture = true
         
         view.addSubview(self.pvImageView)
         
-        NSLayoutConstraint(item: self.pvImageView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 60).isActive = true
+        NSLayoutConstraint(item: self.pvImageView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 100).isActive = true
         NSLayoutConstraint(item: self.pvImageView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 45).isActive = true
         NSLayoutConstraint(item: self.pvImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150).isActive = true
         NSLayoutConstraint(item: self.pvImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300).isActive = true
@@ -53,10 +55,10 @@ class BlockUIKitVC: UIViewController {
         self.textField.text = "Pete Hu"
         self.textField.layer.borderWidth = 1
         self.textField.layer.borderColor = UIColor.black.cgColor
+        self.textField.delegate = self
         
         self.pvTextField = ScreenshotPreventingView(contentView: textField)
         self.pvTextField.translatesAutoresizingMaskIntoConstraints = false
-        self.pvTextField.preventScreenCapture = true
         
         view.addSubview(self.pvTextField)
         
@@ -68,12 +70,12 @@ class BlockUIKitVC: UIViewController {
     
     func labelSetting() {
         
-        self.label.text = "$100,000,000"
+        self.label.text = self.pvImageView.preventScreenCapture ? "Open Block ScreenShot" : "Close Block ScreenShot"
         self.label.numberOfLines = 0
+        self.label.textColor = self.pvImageView.preventScreenCapture ? .red : .black
         
         self.pvLabel = ScreenshotPreventingView(contentView: label)
         self.pvLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.pvLabel.preventScreenCapture = true
         
         view.addSubview(self.pvLabel)
         
@@ -82,7 +84,37 @@ class BlockUIKitVC: UIViewController {
         NSLayoutConstraint(item: self.pvLabel, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -15).isActive = true
         NSLayoutConstraint(item: self.pvLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
     }
- 
+    
+    func switchSetting() {
+        
+        self.sw.isOn = pvImageView.preventScreenCapture
+        
+        self.sw.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(sw)
+        
+        NSLayoutConstraint(item: self.sw, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.sw, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: -40).isActive = true
+        
+        self.sw.addTarget(self, action: #selector(changeSwitch(_:)), for: .valueChanged)
+    }
+    
+    @objc func changeSwitch(_ isSwitch: UISwitch) {
+        
+        pvImageView.preventScreenCapture = isSwitch.isOn
+        pvTextField.preventScreenCapture = isSwitch.isOn
+        pvLabel.preventScreenCapture = isSwitch.isOn
+        
+        self.label.text = self.pvImageView.preventScreenCapture ? "Open Block ScreenShot" : "Close Block ScreenShot"
+        self.label.textColor = self.pvImageView.preventScreenCapture ? .red : .black
+    }
+    
 }
 
-
+extension BlockUIKitVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
