@@ -9,6 +9,8 @@ import UIKit
 
 class TheoryVC: UIViewController {
 
+    static let identifier = "TheoryVC"
+    
     @IBOutlet weak var noHideTextfield: UITextField!
     @IBOutlet weak var hideTextfield: UITextField!
     

@@ -9,6 +9,8 @@ import UIKit
 
 class BlockUIKitVC: UIViewController {
     
+    static let identifier = "BlockUIKitVC"
+    
     let sw = UISwitch()
     
     var imageView = UIImageView()

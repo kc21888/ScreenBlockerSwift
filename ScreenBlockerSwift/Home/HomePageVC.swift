@@ -11,12 +11,13 @@ class HomePageVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
-    let array = ["1. Theory","2.Test Block UIKit"]
+    let array = ["1. Theory","2.Test Block UIKit", "3. Test Block Video", "4. Custom Screen Shot"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
 }
 
 extension HomePageVC: UITableViewDataSource, UITableViewDelegate {
@@ -36,13 +37,25 @@ extension HomePageVC: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "TheoryVC")
+            let vc = storyboard.instantiateViewController(withIdentifier: TheoryVC.identifier)
             self.navigationController?.pushViewController(vc, animated: true)
             
         } else if indexPath.row == 1 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "BlockUIKitVC")
+            let vc = storyboard.instantiateViewController(withIdentifier: BlockUIKitVC.identifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if indexPath.row == 2 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: BlockVideoVC.identifier)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if indexPath.row == 3 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: CustomScreenShotVC.identifier)
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
