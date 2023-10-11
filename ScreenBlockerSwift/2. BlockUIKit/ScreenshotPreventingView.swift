@@ -9,7 +9,6 @@ import UIKit
 
 public final class ScreenshotPreventingView: UIView {
 
-    // MARK: - 📌 Constants
     // MARK: - 🔶 Properties
 
     public var preventScreenCapture = true {

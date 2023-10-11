@@ -17,24 +17,16 @@ struct HiddenContainerRecognizer {
     }
 
     func getHiddenContainer(from view: UIView) throws -> UIView {
-//        print("===) getHiddenContainer 1: \(view)")
+        
         let containerName = try getHiddenContainerTypeInStringRepresentation()
-//        print("===) getHiddenContainer 2: \(containerName)")
         
         let containers = view.subviews.filter { subview in
             type(of: subview).description() == containerName
-        }
-//        print("===) getHiddenContainer 4: \(containers)")
-        
-        containers.forEach { view in
-//            print("===) getHiddenContainer 5: \(view)")
         }
         
         guard let container = containers.first else {
             throw Error.desiredContainerNotFound(containerName)
         }
-
-//        print("===) getHiddenContainer 5: \(container)")
         
         return container
     }
