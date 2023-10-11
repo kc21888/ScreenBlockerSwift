@@ -21,6 +21,7 @@
 		E971E1C82ACA994700937089 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971E1C62ACA994700937089 /* HomePageVC.swift */; };
 		E972CA972ACEBD2300BA973A /* BlockVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E972CA962ACEBD2300BA973A /* BlockVideoVC.swift */; };
 		E972CA9A2ACEBDD900BA973A /* CustomScreenShotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E972CA992ACEBDD900BA973A /* CustomScreenShotVC.swift */; };
+		E9F5ED5F2AD64BFB00CFD452 /* captainPete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9F5ED5E2AD64BFB00CFD452 /* captainPete.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E971E1C62ACA994700937089 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		E972CA962ACEBD2300BA973A /* BlockVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockVideoVC.swift; sourceTree = "<group>"; };
 		E972CA992ACEBDD900BA973A /* CustomScreenShotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScreenShotVC.swift; sourceTree = "<group>"; };
+		E9F5ED5E2AD64BFB00CFD452 /* captainPete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = captainPete.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		E971E1CE2ACA99CA00937089 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E9F5ED5E2AD64BFB00CFD452 /* captainPete.jpg */,
 				E925CB412ACFB9B5000B787C /* pete.mp4 */,
 				E951EBC72AC18AB5006767E9 /* sea.jpg */,
 			);
@@ -209,6 +212,7 @@
 				E925BE472A4968B400334A70 /* Assets.xcassets in Resources */,
 				E925BE452A4968B300334A70 /* Main.storyboard in Resources */,
 				E925CB422ACFB9B5000B787C /* pete.mp4 in Resources */,
+				E9F5ED5F2AD64BFB00CFD452 /* captainPete.jpg in Resources */,
 				E951EBC82AC18AB5006767E9 /* sea.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

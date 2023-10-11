@@ -27,7 +27,7 @@ class BlockVideoVC: UIViewController {
         
         self.view.addSubview(self.pvBgView)
         
-        NSLayoutConstraint(item: self.pvBgView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.pvBgView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 88).isActive = true
         NSLayoutConstraint(item: self.pvBgView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: self.pvBgView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: self.pvBgView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
